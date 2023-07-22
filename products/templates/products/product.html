@@ -4,7 +4,7 @@
 
     <div class="col-3">
         {% if product.image %}
-            <img src="{{ product.imge.url }}" alt="Imagen del producto" width="200" height="200">
+            <img src="{{ product.imge.url }}" alt="Imagen del producto">
         {% endif %}
 
     </div>
@@ -15,7 +15,7 @@
             precio: <span class="text-danger">${{ product.price}}</span>
         </div>
         <div class="">
-            <p> {{ products.description }} </p>
+            <p>{{ products.description }}</p>
         </div>
     </div>
 {% endblock %}
