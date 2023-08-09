@@ -42,5 +42,5 @@ class ProductSearchListView(ListView):
 
         context = super().get_context_data(**kwargs)
         context['query'] = self.query()
-        context['count'] = context['product_list'].count()
+        context['count'] = context['object_list'].count()
         return context

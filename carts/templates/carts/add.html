@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load product_extras %}
+
+{% block content %}
+<div class="col-3">
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="imagen del producto" width="150" height="200">
+    {% endif %}
+</div>
+<div class="col" >
+    <div class="h3 font-weigth-bold text-success">
+        Producto agregado al carrito de compras
+    </div>
+    <div class="">
+        <a href="{% url 'products:product' product.slug %}">
+            {{ product.tittle }}
+        </a>
+    </div>
+    <div class="font-weight-bold text-danger">
+        {{ product.price | price_format }}
+    </div>
+</div>
+{% endblock %}

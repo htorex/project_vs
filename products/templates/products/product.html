@@ -4,18 +4,20 @@
 
     <div class="col-3">
         {% if product.image %}
-            <img src="{{ product.imge.url }}" alt="Imagen del producto">
+            <img src="{{ product.image.url }}" alt="Imagen del producto" width="150" height="200">
         {% endif %}
-
     </div>
 
     <div class="col">
-        <div class="h1">{{ products.tittle }}</div>
+        <div class="h1">{{ product.title }}</div>  <!-- Cambio "products" a "product" -->
         <div class="h5 font-weight-bold">
-            precio: <span class="text-danger">${{ product.price}}</span>
+            precio: <span class="text-danger">${{ product.price }}</span>
         </div>
         <div class="">
-            <p>{{ products.description }}</p>
+            <p>{{ product.description }}</p>  <!-- Cambio "products" a "product" -->
+        </div>
+        <div class="">
+            {% include 'carts/snippets/add.html' %}
         </div>
     </div>
 {% endblock %}

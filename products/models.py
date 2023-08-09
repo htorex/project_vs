@@ -30,3 +30,4 @@ def set_slug(sender, instance, *arg, **kwargs):
         instance.slug = slug
 
 pre_save.connect(set_slug, sender=Product)
+
