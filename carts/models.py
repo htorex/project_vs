@@ -18,7 +18,7 @@ class Carts(models.Model):
     total = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    FEE = 0.05
+    FEE = 0.0
 
     def __str__(self):
         return self.cart_id
@@ -27,6 +27,9 @@ class Carts(models.Model):
     def update_totals(self):
         self.update_subtotal()
         self.update_total()
+
+        if self.order:
+            self.order.update_total()
 
     def update_subtotal(self):
         self.subtotal = sum([ 
@@ -42,6 +45,12 @@ class Carts(models.Model):
 
     def products_related(self):
         return self.cartproducts_set.select_related('product')
+
+    @property
+    def order(self):
+        return self.order_set.first()
+
+
 
 class CartProductManager(models.Manager):
 

@@ -1,6 +1,5 @@
 from django import forms
 
-#from django.contrib.auth.models import User
 from users.models import User
 
 
@@ -41,6 +40,7 @@ class Registerform(forms.Form):
         
         return username
 
+
     def clean_email(self):
 
         email = self.cleaned_data.get('email')
@@ -50,6 +50,7 @@ class Registerform(forms.Form):
         
         return email
     
+
     def clean_rut(self):
 
         rut = self.cleaned_data.get('rut')

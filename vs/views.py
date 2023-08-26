@@ -6,7 +6,8 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib import messages
 
-#from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
+
 from users.models import User
 
 from .forms import Registerform
@@ -39,6 +40,10 @@ def login_view(request):
         if user:
             login(request, user)
             messages.success(request, 'Bienvenido {}'.format(user.username))
+            
+            if request.GET.get('next'):
+                return HttpResponseRedirect(request.GET['next'])
+            
             return redirect('index')
         
         else:
