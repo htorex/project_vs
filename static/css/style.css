@@ -1,16 +1,19 @@
-/* Agrega un fondo de Magic the Gathering */
-body{ 
-    background-image: url('');
+/* zona de importacion */
+@import url('https://fonts.googleapis.com/css2?family=Trade+Gothic:wght@300&display=swap');
+/* . */
+
+
+body { 
+    background-image: url('static/images/fondo1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    
   }
   
-  /* Estiliza el formulario de inicio de sesión */
   .card {
     margin-top: 100px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.505);
+    background-color: rgba(229, 222, 222, 0.9);
   }
   
   .card-header {
@@ -34,11 +37,86 @@ body{
   }
   
   .btn-primary {
-    background-color: #EE3B3B;
-    border-color: #EE3B3B;
+    background-color: #52b94c;
+    border-color: #0f2413;
   }
   
   .btn-primary:hover {
     background-color: #FEDC52;
     border-color: #FEDC52;
   }
+
+  .card-title {
+    font-size: 24px;
+    color: #1fad58;
+  }
+
+  .product-description {
+      margin-top: 10px;
+      color: #666666;
+  }
+
+  .add-to-cart {
+      margin-top: 20px;
+  }
+
+  .custom-card-style {
+    border: 1px solid #e0e0e0;
+  }
+
+  .custom-card-title-style {
+    font-size: 20px;
+    color: #333333;
+    font-family: 'Trade Gothic', sans-serif;
+  }
+
+  .custom-card-description-style {
+    font-size: 14px;
+    color: #666666;
+    font-family: 'Trade Gothic', sans-serif;
+  }
+
+  .custom-card-button-style {
+    background-color: #0eb424;
+    color: #ffffff;
+  }
+
+  /* Estilos para la tarjeta del producto */
+  .product-card {
+    display: flex;
+    border: 1px solid #282424;
+    padding: 10px;
+  }
+
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-details {
+    margin-left: 10px;
+    font-family: 'Trade Gothic', sans-serif;
+  }
+
+  .product-title {
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .product-price {
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  .product-description p {
+    font-size: 14px;
+    color: #666666;
+  }
+
+  .product-actions {
+    margin-top: 10px;
+  }
+
